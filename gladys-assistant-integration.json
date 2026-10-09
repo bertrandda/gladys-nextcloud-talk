@@ -1,0 +1,77 @@
+{
+  "manifest_version": 1,
+  "type": "communication",
+  "name": "Nextcloud Talk",
+  "description": {
+    "en": "Chat with Gladys from Nextcloud Talk: ask questions, receive alerts and images.",
+    "fr": "Discutez avec Gladys depuis Nextcloud Talk : questions, alertes et images."
+  },
+  "version": "1.0.0",
+  "docker_image": "ghcr.io/bertrandda/gladys-nextcloud-talk:1.0.0",
+  "gladys_version": ">=5.1.0",
+  "cover_image": "https://raw.githubusercontent.com/bertrandda/gladys-nextcloud-talk/master/cover.png",
+  "categories": ["notifications"],
+  "messaging": { "receive": true },
+  "config_schema": [
+    {
+      "key": "intro",
+      "type": "section",
+      "label": { "en": "Getting started", "fr": "Pour commencer" },
+      "description": {
+        "en": "Create a Nextcloud account dedicated to Gladys (the bot) and an app password for it in Settings → Security. Each Gladys user then opens a private conversation with this account in Talk and sends the code given by \"Link my account\".",
+        "fr": "Créez un compte Nextcloud dédié à Gladys (le bot) et un mot de passe d'application pour ce compte dans Paramètres → Sécurité. Chaque utilisateur de Gladys ouvre ensuite une conversation privée avec ce compte dans Talk et y envoie le code donné par « Lier mon compte »."
+      },
+      "links": [
+        {
+          "url": "https://docs.nextcloud.com/server/latest/user_manual/en/session_management.html#managing-devices",
+          "label": {
+            "en": "Create an app password",
+            "fr": "Créer un mot de passe d'application"
+          }
+        }
+      ]
+    },
+    {
+      "key": "nextcloud_url",
+      "type": "string",
+      "label": { "en": "Nextcloud URL", "fr": "URL de Nextcloud" },
+      "description": {
+        "en": "Address of your Nextcloud instance, as reachable from Gladys.",
+        "fr": "Adresse de votre instance Nextcloud, telle que Gladys peut la joindre."
+      },
+      "placeholder": {
+        "en": "e.g. https://cloud.example.com",
+        "fr": "ex. https://cloud.example.com"
+      },
+      "required": true
+    },
+    {
+      "key": "bot_username",
+      "type": "string",
+      "label": { "en": "Bot login", "fr": "Identifiant du bot" },
+      "description": {
+        "en": "Login of the Nextcloud account Gladys speaks with.",
+        "fr": "Identifiant du compte Nextcloud avec lequel Gladys parle."
+      },
+      "placeholder": { "en": "e.g. gladys", "fr": "ex. gladys" },
+      "required": true
+    },
+    {
+      "key": "bot_password",
+      "type": "secret",
+      "label": { "en": "Bot app password", "fr": "Mot de passe d'application du bot" },
+      "description": {
+        "en": "An app password of that account rather than its main password.",
+        "fr": "Un mot de passe d'application de ce compte plutôt que son mot de passe principal."
+      },
+      "required": true
+    }
+  ],
+  "actions": [
+    {
+      "key": "test_connection",
+      "label": { "en": "Test the connection", "fr": "Tester la connexion" },
+      "timeout_seconds": 30
+    }
+  ]
+}
