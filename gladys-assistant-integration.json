@@ -9,8 +9,9 @@
   "version": "1.0.0",
   "docker_image": "ghcr.io/bertrandda/gladys-nextcloud-talk:1.0.0",
   "gladys_version": ">=5.1.0",
-  "cover_image": "https://raw.githubusercontent.com/bertrandda/gladys-nextcloud-talk/master/cover.png",
+  "cover_image": "https://raw.githubusercontent.com/bertrandda/gladys-nextcloud-talk/master/nextcloud-talk.jpg",
   "categories": ["notifications"],
+  "transports": ["local", "cloud"],
   "messaging": { "receive": true },
   "config_schema": [
     {
