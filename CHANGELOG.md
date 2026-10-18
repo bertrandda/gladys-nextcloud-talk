@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-10-18
+
 ### Added
 
 - Chat with Gladys from a private Nextcloud Talk conversation with a dedicated
@@ -17,4 +19,5 @@ the notes of the version's GitHub Release.
 - Linking of each Gladys user by a code sent in their Talk conversation.
 - "Test the connection" button in the Configuration screen.
 
-[Unreleased]: https://github.com/bertrandda/gladys-nextcloud-talk/commits/master
+[Unreleased]: https://github.com/bertrandda/gladys-nextcloud-talk/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/bertrandda/gladys-nextcloud-talk/releases/tag/v2.0.0
